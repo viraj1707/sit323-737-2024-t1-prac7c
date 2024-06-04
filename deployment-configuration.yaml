@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: viraj-microservice
+  labels:
+    app: 
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: viraj-microservice
+  template:
+    metadata:
+      labels:
+        app: viraj-microservice
+    spec:
+      containers:
+      - name: viraj-microservice
+        image: as222492963/image1
+        ports:
+        - containerPort: 80
